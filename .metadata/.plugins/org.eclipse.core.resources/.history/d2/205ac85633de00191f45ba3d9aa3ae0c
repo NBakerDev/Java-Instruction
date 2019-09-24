@@ -1,0 +1,33 @@
+package branches;
+
+import java.util.Scanner;
+
+public class Branches {
+
+public void calculateSalary() {
+	
+		
+	}
+
+
+public static void main(String[] args) {  
+
+	Scanner input = new Scanner(System.in);
+	System.out.println("How many hours were worked?: ");
+	float hoursWorked = input.nextFloat();
+	System.out.println("What is the hourly rate?: ");
+	float rate = input.nextFloat();
+	
+	if(hoursWorked <= 40) { 
+		float pay = (rate * hoursWorked);
+		System.out.print(pay);
+	}
+	
+	float ot = hoursWorked - 40;
+	float otpay = (float) ((rate*1.5)*(ot) + (rate*(hoursWorked-ot)));
+	System.out.print("Weekly pay is: " + otpay);
+	input.close();
+	
+	
+	}
+}
